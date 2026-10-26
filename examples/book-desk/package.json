@@ -1,0 +1,33 @@
+{
+  "name": "book-desk",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.23.0",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest run --environment jsdom",
+    "typecheck": "tsc --noEmit --strict --jsx react-jsx --target es2022 --module esnext --moduleResolution bundler --lib es2022,dom,dom.iterable --skipLibCheck --isolatedModules --noUnusedLocals --noUnusedParameters --noFallthroughCasesInSwitch src/main.tsx src/screen.tsx src/screen.test.tsx"
+  },
+  "dependencies": {
+    "@hybridappdev/primitives": "github:hybridappdev/primitives",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "jsdom": "^30.1.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "@hybridappdev/primitives"]
+  }
+}
